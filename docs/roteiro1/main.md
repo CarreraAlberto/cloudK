@@ -1,25 +1,26 @@
 ## Objetivo
 
-Aqui vai o objetivo macro do roteiro. Por que estamos fazendo o que estamos fazendo?
+- Entender os conceitos básicos sobre uma plataforma de gerenciamento de hardware.
+- Introduzir conceitos básicos sobre redes de computadores.
 
-## Montagem do Roteiro
 
-Os pontos "tarefas" são os passos que devem ser seguidos para a realização do roteiro. Eles devem ser claros e objetivos. Com evidências claras de que foram realizados.
+## Tarefa 1
 
-### Tarefa 1
+### Banco de dados funcionando e seu Status está como "Ativo" para o Sistema Operacional
+![Database ativo](./database_ativo.jpeg)
 
-Instalando o MAAS:
 
-<!-- termynal -->
+### Banco de dados acessivel na máquina na qual ele foi implantado.
+![Database ativo](./aces_propria_maq.jpeg)
 
-``` bash
-sudo snap install maas --channel=3.5/Stable
-```
+### Banco de dados acessivel a partir de uma conexão vinda da máquina MAIN.
+![Database ativo](./aces_conexao_main.jpeg)
 
-![Tela do Dashboard do MAAS](./maas.png)
-/// caption
-Dashboard do MAAS
-///
+### Porta em que este serviço está funcionando.
+![Database ativo](./porta_servico.jpeg)
+
+
+ --- tarefa 1 100% completa e registrada no relatório (daqui pra cima ta feito)
 
 Conforme ilustrado acima, a tela inicial do MAAS apresenta um dashboard com informações sobre o estado atual dos servidores gerenciados. O dashboard é composto por diversos painéis, cada um exibindo informações sobre um aspecto específico do ambiente gerenciado. Os painéis podem ser configurados e personalizados de acordo com as necessidades do usuário.
 
