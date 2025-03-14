@@ -7,17 +7,17 @@
 ## Tarefa 1
 
 ### Banco de dados funcionando e seu Status está como "Ativo" para o Sistema Operacional
-![Database ativo](./database_ativo.jpeg)
+![Database ativo](./img/database_ativo.jpeg)
 
 
 ### Banco de dados acessivel na máquina na qual ele foi implantado.
-![Database ativo](./aces_propria_maq.jpeg)
+![Database ativo](./img/aces_propria_maq.jpeg)
 
 ### Banco de dados acessivel a partir de uma conexão vinda da máquina MAIN.
-![Database ativo](./aces_conexao_main.jpeg)
+![Database ativo](./img/aces_conexao_main.jpeg)
 
 ### Porta em que este serviço está funcionando.
-![Database ativo](./porta_servico.jpeg)
+![Database ativo](./img/porta_servico.jpeg)
 
 
  --- tarefa 1 100% completa e registrada no relatório (daqui pra cima ta feito)
@@ -26,13 +26,37 @@ Conforme ilustrado acima, a tela inicial do MAAS apresenta um dashboard com info
 
 ### Tarefa 2
 
-## App
+### Dashboard cdo **MAAS** com as máquinas
+![Database ativo](./img/dashboard_maas.jpeg)
+
+### Imagens sincro
+![Database ativo](./img/imagens_sincro.jpeg)
+
+### Testes de hardware e commissioning com Status "OK"
+#### Server 1
+![Database ativo](./img/teste_server1.jpeg)
+#### Server 2
+![Database ativo](./img/teste_server2.jpeg)
+#### Server 3
+![Database ativo](./img/teste_server3.jpeg)
+#### Server 4
+![Database ativo](./img/teste_server4.jpeg)
+#### Server 5
+![Database ativo](./img/teste_server5.jpeg)
 
 
+### Tarefa 3
+ 
+### Dashboard do MAAS com as 2 Maquinas e seus respectivos IPs
+![Database ativo](./img/dashboard_maas_2maq.jpeg)
 
-### Tarefa 1
+### Aplicação Django conectada ao servidor
+![Database ativo](./img/django_conectado.jpeg)
 
-### Tarefa 2
+### Implementação manual da aplicação Django e banco de dados:
+Aqui vai a explicação
+
+
 
 Exemplo de diagrama
 
