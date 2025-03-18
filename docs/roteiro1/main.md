@@ -27,28 +27,30 @@ Conforme ilustrado acima, a tela inicial do MAAS apresenta um dashboard com info
 ### Tarefa 2
 
 ### Dashboard cdo **MAAS** com as máquinas
-![Database ativo](./img/dashboard_maas.jpeg)
+![Database ativo](./img/dashboard_maas.png)
 
 ### Imagens sincro
-![Database ativo](./img/imagens_sincro.jpeg)
+![Database ativo](./img/imagens_sincro.png)
 
 ### Testes de hardware e commissioning com Status "OK"
 #### Server 1
-![Database ativo](./img/teste_server1.jpeg)
+![Database ativo](./img/teste_server1.png)
 #### Server 2
-![Database ativo](./img/teste_server2.jpeg)
+![Database ativo](./img/teste_server2.png)
 #### Server 3
-![Database ativo](./img/teste_server3.jpeg)
+![Database ativo](./img/teste_server3.png)
 #### Server 4
-![Database ativo](./img/teste_server4.jpeg)
+![Database ativo](./img/teste_server4.png)
 #### Server 5
-![Database ativo](./img/teste_server5.jpeg)
+![Database ativo](./img/teste_server5.png)
 
 
 ### Tarefa 3
  
 ### Dashboard do MAAS com as 2 Maquinas e seus respectivos IPs
-![Database ativo](./img/dashboard_maas_2maq.jpeg)
+![Database ativo](./img/dashboard_maas_2maq.png)
+Server1 ip:172.16.15.0 \
+Server2 ip:172.16.0.130
 
 ### Aplicação Django conectada ao servidor
 ![Database ativo](./img/django_conectado.jpeg)
