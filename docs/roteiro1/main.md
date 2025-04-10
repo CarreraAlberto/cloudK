@@ -1,11 +1,11 @@
-## Objetivo
+# Roteiro 1
 
+## Objetivo
 - Entender os conceitos básicos sobre uma plataforma de gerenciamento de hardware.
 - Introduzir conceitos básicos sobre redes de computadores.
 
 
 ## Tarefa 1
-
 ### Banco de dados funcionando e seu Status está como "Ativo" para o Sistema Operacional
 ![Database ativo](./img/database_ativo.jpeg)
 
@@ -109,5 +109,4 @@ A instalação manual exige configurar tudo passo a passo, o que torna o process
 ![Database ativo](./img/get_server3.jpg)
 
 ## Conclusão
-
 (Descreva como o MaaS poderia ser utilizado em um datacenter real (com muitos servidores) e como seria um processo alternativo sem essa ferramenta. Ainda, é possível e *SIMPLES* realizar a implantação de uma aplicação usando o MaaS?)
