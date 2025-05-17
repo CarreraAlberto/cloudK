@@ -26,3 +26,5 @@ def verify_token(token: str) -> str:
         return payload.get("sub")
     except JWTError as e:
         raise ValueError("Token inválido ou expirado") from e
+
+
