@@ -7,7 +7,7 @@ Autenticar usuários e gerar tokens JWT com validade configurável;
 
 Consultar dados protegidos (JSON estático do índice Bovespa dos últimos 10 dias) mediante token válido.
 
-# Como Executar a Aplicação
+## Como Executar a Aplicação
 
 Clone o repositório
 ```sh
@@ -38,7 +38,7 @@ Execute com Docker Compose:
 docker compose up -d
 ```
 
-# Documentação dos Endpoints
+## Documentação dos Endpoints
 | Endpoint      | Método | Descrição                                       | Requisição                                      |
 |---------------|--------|-------------------------------------------------|-------------------------------------------------|
 | `/registrar`  | POST   | Cria novo usuário e retorna o token JWT         | JSON `{ "email": "...", "senha": "..." }`       |
@@ -46,4 +46,68 @@ docker compose up -d
 | `/consultar`  | GET    | Retorna JSON protegido (Bovespa últimos 10 dias)| Header `Authorization: Bearer <JWT>`            |
 
 
-# Capturas de tela dos endpoints testados
+## Capturas de tela dos endpoint
+![Dashboard API`](assets/img1.jpg)
+
+## Link do vídeo para teste dos endpoints
+https://youtu.be/R042mTfEmpw
+
+## Link para o Docker Hub do projeto
+https://hub.docker.com/r/joaoopalma/cloudk-api
+
+## Localização do `docker-compose.yml`
+
+A estrutura de diretórios do projeto é:
+
+```text
+docs/
+└── projeto/
+    ├── api/
+    │   ├── app/
+    │   │   ├── __init__.py
+    │   │   ├── app.py
+    │   │   ├── auth.py
+    │   │   ├── bovespa.json
+    │   │   ├── crud.py
+    │   │   ├── database.py
+    │   │   ├── external.py
+    │   │   ├── models.py
+    │   │   └── schemas.py
+    │   ├── .env
+    │   ├── Dockerfile
+    │   ├── requirements.txt
+    │   └── docker-compose.yml    ← aqui
+    ├── assets/
+    │   └── img1.jpg
+    └── main.md
+```
+
+## Arquivo docker-compose.yaml
+
+```sh
+version: "3.8"
+
+services:
+  app:
+    image: joaoopalma/cloudk-api:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./api/.env
+    depends_on:
+      - database
+
+  database:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
+```
+ 

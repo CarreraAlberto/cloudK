@@ -1,0 +1,13 @@
+# Não envie arquivos de ambiente
+.env
+
+# Não envie o virtualenv
+venv/
+__pycache__/
+*.pyc
+
+# Não envie banco de dados local
+test.db
+
+# Se tiver logs ou qualquer outra coisa
+*.log

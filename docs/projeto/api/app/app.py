@@ -8,6 +8,9 @@ from dotenv import load_dotenv
 from . import models, schemas, crud, auth, external
 from .database import SessionLocal, engine, Base
 
+import socket
+from datetime import datetime, timezone
+
 # Carrega .env e cria tabelas
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "../.env"))
 Base.metadata.create_all(bind=engine)
@@ -51,3 +54,11 @@ def consultar(authorization: str = Header(...), db: Session = Depends(get_db)):
     if not crud.get_user_by_email(db, email):
         raise HTTPException(403, "Usuário não encontrado")
     return external.fetch_data()
+
+@app.get("/health-check")
+def health_check():
+    return {
+        "statusCode": 200,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "hostname": socket.gethostname()
+    }
