@@ -1,6 +1,6 @@
 # Roteiro 3
 
-## Objetivo 
+## Objetivos
 1. Entender os conceitos básicos de Private Cloud.
 2. Aprofundar conceitos sobre redes virtuais SDN.
 
