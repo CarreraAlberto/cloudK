@@ -4,6 +4,7 @@ import os
 from fastapi import FastAPI, Depends, HTTPException, Header, status
 from sqlalchemy.orm import Session
 from dotenv import load_dotenv
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 from . import models, schemas, crud, auth, external
 from .database import SessionLocal, engine, Base
@@ -12,10 +13,14 @@ import socket
 from datetime import datetime, timezone
 
 # Carrega .env e cria tabelas
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "../.env"))
+load_dotenv()
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Cloud API")
+
+
+# # Dependência para obter o token Bearer
+# bearer_scheme = HTTPBearer()
 
 # Dependência para obter sessão do DB
 def get_db():
@@ -54,8 +59,22 @@ def consultar(authorization: str = Header(...), db: Session = Depends(get_db)):
     if not crud.get_user_by_email(db, email):
         raise HTTPException(403, "Usuário não encontrado")
     return external.fetch_data()
+# def consultar(
+#     credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme),
+#     db: Session = Depends(get_db),
+# ):
+#     token = credentials.credentials                # o JWT puro
+#     try:
+#         email = auth.verify_token(token)
+#     except ValueError:
+#         raise HTTPException(status.HTTP_403_FORBIDDEN, "Token inválido ou expirado")
+#     if not crud.get_user_by_email(db, email):
+#         raise HTTPException(status.HTTP_403_FORBIDDEN, "Usuário não encontrado")
+#     return external.fetch_data()
 
-@app.get("/health-check")
+
+
+@app.get("/health_check")
 def health_check():
     return {
         "statusCode": 200,
