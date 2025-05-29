@@ -89,7 +89,7 @@ version: "3.8"
 
 services:
   app:
-    image: joaoopalma/cloudk-api:latest
+    image: joaoopalma/cloudk-api:v7
     ports:
       - "8000:8000"
     env_file:
@@ -110,4 +110,43 @@ services:
 volumes:
   db_data:
 ```
- 
+# Parte 2: Deploy na Nuvem (AWS Lightsail)
+
+Nesta seção documentamos:
+
+1. **Explicação do projeto**  
+   Relembramos que a CloudK API é uma RESTful em FastAPI, com endpoints de registro, login (JWT), consulta Bovespa e health-check.
+
+2. **Como executar na AWS**  
+  - A imagem Docker `joaoopalma/cloudk-api:v7` está no Docker Hub.  
+  - Serviço criado em Lightsail Container Service:
+     - **Nome**: fastapi-service  
+     - **Power**: m1.nano (0.25 vCPU, 512 MB RAM)  
+     - **Scale**: 5 instâncias  
+
+  - Banco gerenciado em Lightsail Databases:
+     - **Engine**: PostgreSQL 17.5  
+     - **DB name**: fastapi-db  
+     - **Master user**: admin_user
+     - **Senha**: cloudkcloudk  
+     - **Public mode**: habilitado
+
+3. **Endpoints testados**  
+  - Health check: 
+   ![Endpoints AWS health check](assets/health_check.png)
+
+  - Registrar e Login
+  ![Endpoints AWS registrar e login](assets/registrar_login.png)
+
+  - Consultar
+  ![Endpoints AWS consultar](assets/consultar.png)
+
+4. **Infraestrutura funcionando**  
+   ![Console Lightsail Containers](assets/foto_container.png)
+
+5. **Tela de custos (dia 27/05/2025)**  
+   ![Custos AWS no dia da entrega](assets/foto_custo.jpg)
+
+6. **Link para vídeo de execução**
+
+https://youtu.be/LVtL4FoiDQA
