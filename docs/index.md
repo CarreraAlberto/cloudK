@@ -8,18 +8,21 @@
 
 ## KIT-P
 
-João da Silva
+Alberto Carrera
 
-Pedro de Souza
+Felipe Frug
+
+João Palma
+
 
 
 ## Entregas
 
-- [x] Roteiro 1 - Data 23/02/2025
-- [ ] Roteiro 2
-- [ ] Roteiro 3
-- [ ] Roteiro 4
-- [ ] Projeto
+- [x] Roteiro 1
+- [x] Roteiro 2
+- [x] Roteiro 3
+- [x] Roteiro 4
+- [x] Projeto
 
 
 ## Referências
