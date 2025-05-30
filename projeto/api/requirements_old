@@ -1,0 +1,11 @@
+# lista de bibliotecas Python
+
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+passlib[bcrypt]
+python-jose[cryptography]
+requests
+python-dotenv
+email-validator

@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  app:
+    image: joaoopalma/app_projeto:v7
+    ports:
+      - "8000:8000"
+    environment:
+      POSTGRES_USER: admin_user
+      POSTGRES_PASSWORD: cloudkcloudk
+      POSTGRES_DB: dbfastapi
+      DATABASE_HOST: ls-d873d07a9a75b5d56df773e94247e024341049f4.c8hqgu8egqfy.us-east-1.rds.amazonaws.com
+      DATABASE_PORT: 5432
+
+      # Configurações do JWT
+      JWT_SECRET: inspercloudk
+      JWT_ALGO: HS256
+      JWT_EXPIRY_MIN: 60
+#     depends_on:
+#       - database
+
+#   database:
+#     image: postgres:15
+#     restart: always
+#     environment:
+#       POSTGRES_USER: ${POSTGRES_USER}
+#       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+#       POSTGRES_DB: ${POSTGRES_DB}
+#     volumes:
+#       - db_data:/var/lib/postgresql/data
+
+# volumes:
+#   db_data:
